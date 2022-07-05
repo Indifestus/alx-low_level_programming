@@ -1,6 +1,6 @@
-#include<unisd.h>
+#include "main.h"
 /**
- * main -main fuction
+ * main - main function
  *
  * Return: End program
  */
@@ -10,15 +10,12 @@ int main(void)
 	int n = 0;
 
 	while (n < 8)
-
 	{
 		_putchar(string[n]);
 		++n;
-
 	}
 
 	_putchar(10);
-
 	return (0);
 
 }
