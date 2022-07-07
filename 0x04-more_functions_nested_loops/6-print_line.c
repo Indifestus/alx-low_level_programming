@@ -1,28 +1,17 @@
 #include "main.h"
 /**
- * more_numbers - function
+ * print_line - function
+ *
+ * @n: parameter
+ *
+ * Return: return value
  */
-void more_numbers(void)
+void print_line(int n)
 {
-	int n = 48;
-	int l = 0;
-	int reset = 0;
-
-	while (l < 10)
+	if (n > 0)
 	{
-		while (n <= 62)
-		{
-			if (n > 57)
-			{
-				reset = 10;
-				_putchar(49);
-			}
-			_putchar(n - reset);
-			n++;
-		}
-		n = 48;
-		reset = 0;
-		l++;
-		_putchar(10);
+		while (n--)
+			_putchar(95);
 	}
+	_putchar(10);
 }
