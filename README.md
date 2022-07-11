@@ -1,1 +1,1 @@
-My first readme
+pointers arrays and strings
