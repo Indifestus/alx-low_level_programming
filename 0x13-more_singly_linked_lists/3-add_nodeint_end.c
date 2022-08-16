@@ -1,13 +1,13 @@
 #include "lists.h"
 /**
- * add_nodeint_end -Function that adds a node to the end
+ * add_nodeint_end - Function that adds a new node at the end
  * of a listint_t list.
  *
  * @head: Parameter double pointer that point to the head of
  * the linked list
- * @n: Parameter with the value of the number
+ * @n: Parameter with the value of the number data
  *
- * Return: always return the new node
+ * Return: The new node
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -18,7 +18,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 	{
-
 		return (NULL);
 	}
 	new->n = n;
@@ -26,18 +25,16 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	if (*head == NULL)
 	{
-		*head == new;
+		*head = new;
 	}
-
 	else
 	{
-		if (temp->next)
+		while (temp->next)
 		{
 			temp = temp->next;
 		}
 		temp->next = new;
 	}
-
 
 	return (new);
 }
